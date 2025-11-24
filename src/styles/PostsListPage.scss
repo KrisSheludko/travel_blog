@@ -1,0 +1,233 @@
+@import './global';
+
+.main {
+  padding-bottom: 22px;
+  flex: 1;
+  margin: 0;
+}
+
+.posts {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    gap: 30px;
+    justify-content: center;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 30px 0 0;
+  }
+
+  &__add-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  &__add-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 13px;
+    color: #FFFFFF;
+    width: 294px;
+    height: 51px;
+    border-radius: 10px;
+    padding: 19px 30px;
+    background: #FFA902;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #F3A100;
+    }
+  }
+}
+
+.postCard {
+  width: 370px;
+  height: 552px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px 0px #0000001A;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 288px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    padding: 32px 25px 25px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(552px - 288px);
+  }
+
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: #141414;
+    margin-bottom: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 36px;
+  }
+
+  &__excerpt {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 183%;
+    color: #868383;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: auto;
+    padding-top: 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__location {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #868383;
+    line-height: 100%;
+  }
+
+  &__link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 183%;
+    text-decoration: underline;
+    color: #FFA902;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #e59400;
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 0;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #141414;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #868383;
+    margin-bottom: 20px;
+  }
+}
+
+.error {
+  padding: 60px 0;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #141414;
+    margin-bottom: 15px;
+  }
+
+  &__message {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #868383;
+    margin-bottom: 20px;
+  }
+
+  &__solution {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFA902;
+    margin-top: 10px;
+    background: rgba(255, 169, 2, 0.1);
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .posts__grid {
+    grid-template-columns: repeat(2, 370px);
+    max-width: 770px;
+  }
+}
+
+@media (max-width: 820px) {
+  .posts__grid {
+    grid-template-columns: 370px;
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts__grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .postCard {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+
+    &__content {
+      padding: 20px 15px 15px 15px;
+    }
+  }
+
+  .posts__add-button {
+    width: 100%;
+    max-width: 294px;
+  }
+}
