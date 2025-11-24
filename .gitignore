@@ -1,0 +1,7 @@
+# Dependencies
+node_modules
+
+
+# CSS files
+src/**/*.css
+src/**/*.css.map
