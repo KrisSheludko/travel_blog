@@ -1,3 +1,0 @@
-export { default } from './UserProfilePage';
-export { default as ProfileView } from './ProfileView';
-export { default as ProfileEdit } from './ProfileEdit';
