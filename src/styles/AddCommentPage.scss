@@ -33,7 +33,7 @@
 
     .form-group {
       position: relative;
-      margin-bottom: 31px;
+      margin-bottom: 40px;
 
       label {
         display: flex;
@@ -122,32 +122,42 @@
         }
       }
 
+      .bottom-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+        min-height: 22px;
+        width: 100%;
+      }
+
+      .error-text-inline {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FF4D4F;
+        line-height: 22px;
+        text-align: left;
+      }
+
       .char-counter {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         font-size: 13px;
         color: #868383;
         text-align: right;
-        margin-top: -3px;
+        line-height: 22px;
       }
 
       .error-text {
+        position: absolute;
+        bottom: -24px;
+        left: 0;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         font-size: 14px;
         color: #FF4D4F;
         line-height: 22px;
-        margin-top: 4px;
-        display: block;
-        position: absolute;
-        bottom: -24px;
-        left: 0;
-      }
-
-      textarea~.error-text {
-        position: static;
-        margin-top: -20px;
-        margin-bottom: 5px;
       }
     }
 
@@ -221,7 +231,6 @@
     }
   }
 }
-
 
 .modal-overlay {
   position: fixed;
